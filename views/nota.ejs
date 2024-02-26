@@ -1,0 +1,170 @@
+<!-- nota.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/dash.css" />
+    <title>Nota</title>
+  </head>
+  <body>
+    <!-- <h2>Nota Transaksi</h2>
+<table>
+  <tr>
+    <th>ID Barang</th>
+    <th>Nama Produk</th>
+    <th>Jumlah</th>
+    <th>Harga</th>
+    <th>Subtotal</th>
+  </tr>
+  <% nota.forEach(function(rows) { %>
+    <tr>
+      <td><%= rows.idBarang %></td>
+      <td><%= rows.namaBarang %></td>
+      <td><%= rows.jumlah %></td>
+      <td><%= rows.hargaBarang %></td>
+      <td><%= rows.subtotal %></td>
+    </tr>
+  <% }); %>
+</table> -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8" />
+
+        <title>Invoice receipt - Bootdey.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/css/nota.css" />
+      </head>
+      <body>
+        <div class="receipt-content">
+          <div class="container bootstrap snippets bootdey">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="invoice-wrapper">
+                  <div class="intro">
+                    <div class="payment-info">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <span>Payment No.</span>
+                          <strong>434334343</strong>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                          <span>Payment Date</span>
+                          <strong>Jul 09, 2014 - 12:20 pm</strong>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="payment-details">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <span>Pelanggan</span>
+                          <% view_pelanggan.forEach(function(cust) { %>
+                          
+                          <strong><%= cust.namaCustomer %></strong>
+                          <p>
+                            989 5th Avenue <br />
+                            <%= cust.kota %> <br />
+                            <% }); %>
+                            55839 <br />
+                            USA <br />
+                            <a href="#">
+                              <span
+                                class="__cf_email__"
+                                data-cfemail="f59f9a9b9b8c91909393b59298949c99db969a98"
+                                >[email&#160;protected]</span
+                              >
+                            </a>
+                          </p>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                          <span>Payment To</span>
+                          <strong>
+                            TKI (Toko Kelontong Industries) Gmbh.
+                          </strong>
+                          <p>
+                            Lor 11th Avenue <br />
+                            Jejer Kauman <br />
+                            99383 <br />
+                            Jermany <br />
+                            <a href="#">
+                              <span
+                                class="__cf_email__"
+                                data-cfemail="c3a9b6a2ada5a6b183a4aea2aaafeda0acae"
+                                >[email&#160;protected]</span
+                              >
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line-items">
+                      <div class="headers clearfix">
+                        <div class="row">
+                          <div class="col-xs-4">Nama Barang</div>
+                          <div class="col-xs-3">Quantity</div>
+                          <div class="col-xs-5 text-right">Total</div>
+                        </div>
+                      </div>
+                      <% nota.forEach(function(rows) { %>
+                      <div class="items">
+                        <div class="row item">
+                          <div class="col-xs-4 desc">
+                            <%= rows.namaBarang %>
+                          </div>
+                          <div class="col-xs-3 qty"><%= rows.jumlah %></div>
+                          <div class="col-xs-5 amount text-right">
+                            Rp<%= rows.subtotal %>
+                          </div>
+                        </div>
+                        <% }); %>
+                      </div>
+
+                      <div class="total text-right">
+                        <p class="extra-notes">
+                          <strong>Extra Notes</strong>
+                          Please send all items at the same time to shipping
+                          address by next week. Thanks a lot.
+                        </p>
+                        <% total_subtotal.forEach(function(total) { %>
+                        <div class="field">
+                          Subtotal <span>Rp<%= total.total_subtotal %></span>
+                        </div>
+
+                        <div class="field">Shipping <span>$0.00</span></div>
+                        <div class="field">Discount <span>0%</span></div>
+                        <div class="field grand-total">
+                          Total <span>Rp<%= total.total_subtotal %></span>
+                        </div>
+                        <% }); %>
+                      </div>
+                      <div class="print">
+                        <a href="#">
+                          <i class="fa fa-print"></i>
+                          Print this receipt
+                        </a>
+                      </div>
+                      <div class="footer">Copyright © 2014. company name</div>
+                    </div>
+                  </div>
+                </div>
+                <script
+                  data-cfasync="false"
+                  src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+                ></script>
+                <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+                <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+                <script type="text/javascript"></script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 53px 0 0 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.navbar {
+  overflow: hidden;
+  display: block;
+  background-color: #1d2a35;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  z-index: 100;
+}
+
+.navbar a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  margin: 0 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  background-color: #1bb68f;
+  color: #eeeeee;
+}
+h2 {
+  font-weight: 500;
+  margin: 0 0 0.9em 0 ;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Menyesuaikan lebar dengan form */
+}
+
+button:hover {
+  background-color: #45a049;
+}

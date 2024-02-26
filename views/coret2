@@ -1,0 +1,118 @@
+<!-- <p>Nomor Nota: <%= nota.nomor %></p>
+    <p>Tanggal: <%= nota.tanggal %></p>
+    <hr>
+    <h2>Daftar Barang:</h2>
+    <ul>
+        <% nota.items.forEach(item => { %>
+            <li>
+                <%= item.nama %> - <%= item.harga %> x <%= item.jumlah %> = <%= item.harga * item.jumlah %>
+            </li>
+        <% }); %>
+    </ul>
+    <hr>
+    <p>Total: <%= nota.total %></p>
+    <h2>Informasi Pelanggan:</h2>
+    <p>Nama: <%= nota.pelanggan.nama %></p>
+    <p>Alamat: <%= nota.pelanggan.alamat %></p>
+    <p>Telepon: <%= nota.pelanggan.telepon %></p> -->
+      <!-- Tombol untuk menutup floating page -->
+
+
+
+
+       <div id="floatingPage" class="floating-page">
+        <div class="floating-content">
+          <!-- Isi konten floating page disini -->
+          <!-- <h2>Detail Pelanggan</h2>
+        <form action="/" method="post">
+          <p class="form-label">Nama Pelanggan</p>
+          <input type="text" name="customerName" />
+          <p class="form-label">Nomor Telepon</p>
+          <input type="text" name="customerName" />
+          <p class="form-label">Kota</p>
+          <input type="text" name="customerName" />
+          <!-- <input type="submit" value="Add" /> 
+        </form> -->
+          <!-- <button class="floating-button" id="closeFloatingPageBtn">Tutup</button> -->
+        </div>
+
+
+            <script src="/public/floating.js" type="text/javascript"></script>
+
+
+
+
+            // Tambahkan route untuk menampilkan nota
+app.get('/nota', (req, res) => {
+    // Di sini Anda akan mengambil data nota dari database
+    // Misalnya, menggunakan query ke tabel transaksi atau data lainnya
+    // Setelah itu, Anda akan merender template nota dengan data yang Anda dapatkan
+    // Contoh data nota statis:
+    const nota = {
+        nomor: "001",
+        tanggal: "19 Februari 2024",
+        items: [
+            { nama: "Kemeja", harga: 200000, jumlah: 2 },
+            { nama: "Celana", harga: 150000, jumlah: 1 }
+        ],
+        total: 550000, // Total harga semua barang
+        pelanggan: {
+            nama: "John Doe",
+            alamat: "Jl. Contoh No. 123",
+            telepon: "081234567890"
+        }
+    };
+
+    // Render template nota dengan data nota yang telah Anda siapkan
+    res.render('nota', { nota: nota });
+});
+
+
+
+
+// app.post('/update/:id', (req, res) => {
+//   const subtotal = hargaBarang * jumlah; // Hitung subtotal
+
+
+//   connection.query(
+//     'UPDATE barangbeli SET jumlah = ?, subtotal = ?, WHERE idBarang = ?',
+//     [req.body.jumlah, subtotal, req.params.id],
+//     (error, results) =>{ 
+//       if (error) {
+//         // Tangani kesalahan jika ada
+//         console.log("Error:", error);
+//         res.status(500).send("Terjadi kesalahan saat memperbarui data.");
+//       } else {
+//         // Redirect ke halaman '/shop' setelah berhasil memperbarui data
+//         res.redirect('/shop');
+//       }
+//     }
+//   );
+//   });
+
+
+ // Di endpoint pembayaran, misalnya '/shop/payment'
+// app.post('/payment/:id', (req, res) => {
+//   const { jumlah } = req.body; // items adalah array objek yang berisi informasi setiap barang yang dibeli
+
+//   let totalPrice = 0;
+
+//   // Menghitung harga total untuk setiap barang
+//   jumlah.forEach(jumlah => {
+//     totalPrice += jumlah.hargaBarang * jumlah.jumlah;
+//   });
+
+//   // Sekarang totalPrice berisi harga total dari semua barang yang dibeli
+//   console.log("Harga total :" + totalPrice );
+//   res.redirect('/shop');
+//   // Selanjutnya, Anda dapat memproses pembayaran atau menampilkan halaman konfirmasi pembayaran dengan harga total
+// });
+
+
+
+
+ <p class="form-label">Harga Total Barang</p>
+            <!-- <input type="number" name="hargaBarang" value="<%= info.hargaBarang %>"/> -->
+
+            <p class="form-label">Uang Tunai</p>
+            <!-- <input type="number" name="hargaBarang" value="<%= info.hargaBarang %>"/> --></div>

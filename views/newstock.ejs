@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="/css/dash.css">
+    <script src="/app.js"></script>
+    <title>Sliding Menu</title>
+ </head>
+
+<body>
+    <div id="main-container">
+        <div class="menu">
+            <ul class="menu-content">
+                <li><a href="#"><span class="material-symbols-outlined">home</span><span>Home</span></a></li>
+                <li><a href="/shop"><span class="material-symbols-outlined">shop</span><span>Shop</span></a></li>
+                <!-- <li><a href="#"><span class="material-symbols-outlined">explore</span><span>Explore</span></a></li> -->
+                <li><a href="/stock"><span class="material-symbols-outlined">analytics</span><span>Stock</span></a></li>
+                <li><a href="#"><span class="material-symbols-outlined">settings</span><span>Settings</span></a></li>
+                <li><a href="#"><span class="material-symbols-outlined">person</span><span>Account</span></a></li>
+                <!-- <li><a href="#"><span class="material-symbols-outlined">report</span><span>Report</span></a></li> -->
+                <!-- <li><a href="#"><span class="material-symbols-outlined">email</span><span>Contact</span></a></li> -->
+                <li><a href="#"><span class="material-symbols-outlined">logout</span><span>Logout</span></a></li>
+        </div>
+    <div class="container-input">
+      <div class="container-header">
+        <h1>Adding Items</h1>
+      </div>
+      <div class="item-form-wrapper">
+        <p class="form-label">Input nama barang</p>
+        <form action="/createstock" method="post">
+          <input type="text" name="itemName">
+          <p class="form-label">Kategori</p>
+          <input type="text" name="itemCategory">
+          <p class="form-label">Harga</p>
+          <input type="number" name="itemPrice">
+          <p class="form-label">Stok</p>
+          <input type="number" name="itemStock">
+          <div class="button-form">
+            <a href="/stock" class="new-button">Back</a>
+            <input type="submit" value="Add">
+          </div>
+        </form>
+      </div>
+      <!-- <a href="/dashboard" class="cancel-button">Kembali</a> -->
+    </div>
+  </body>
+</html>

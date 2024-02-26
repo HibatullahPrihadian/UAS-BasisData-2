@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/dash.css">
+    <script src="/app.js"></script>
+    <title>Tambah Barang Belanja</title>
+</head>
+
+<body>
+    <div id="main-container">
+        <div class="menu">
+            <ul class="menu-content">
+                <li><a href="#"><span class="material-symbols-outlined">home</span><span>Home</span></a></li>
+                <li><a href="/shop"><span class="material-symbols-outlined">shop</span><span>Shop</span></a></li>
+                <!-- <li><a href="#"><span class="material-symbols-outlined">explore</span><span>Explore</span></a></li> -->
+                <li><a href="/stock"><span class="material-symbols-outlined">analytics</span><span>Stock</span></a></li>
+                <li><a href="#"><span class="material-symbols-outlined">settings</span><span>Settings</span></a></li>
+                <li><a href="#"><span class="material-symbols-outlined">person</span><span>Account</span></a></li>
+                <!-- <li><a href="#"><span class="material-symbols-outlined">report</span><span>Report</span></a></li> -->
+                <!-- <li><a href="#"><span class="material-symbols-outlined">email</span><span>Contact</span></a></li> -->
+                <li><a href="#"><span class="material-symbols-outlined">logout</span><span>Logout</span></a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+      <div class="container-header">
+        <h1>Tambah Barang Belanja</h1>
+
+      </div>
+      <div class="index-table-wrapper">
+        <div class="table-head">
+          <span class="id-column">ID</span>
+          <span class="name-column">Nama</span>
+          <span class="category-column">Kategori</span>
+          <span class="stock-column">Stok</span>
+          <span class="amount-column">Harga</span>
+        </div>
+        <ul class="table-body">
+          <% stock.forEach((stok) => { %>
+            <li>
+              <div class="table-body">  
+                <span class="id-column"><%= stok.idBarang %></span>
+                <span class="name-column"><%= stok.namaBarang %></span>
+                <span class="category-column"><%= stok.kategori %></span>
+                <span class="stock-column"><%= stok.stock %></span>
+                <span class="amount-column"><%= stok.hargaBarang %></span>
+              </div>
+              <div class="item-menu">
+                </form>
+                <form action="/beli/<%= stok.idBarang %>">
+                  <input type="submit" value="Beli">
+                </form>
+              </div>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      <a href="/shop" class="new-button">Kembali</a>
+    </div>
+    </div>
+</body>
+
+</html>
